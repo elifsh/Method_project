@@ -31,3 +31,18 @@ public class Main {
 }
 
 ```
+
+### Kendisine parametre olarak gelen n tamsayısı kadar adınızı ekrana yazan methodu yazınız.
+```java
+public class Main {
+    
+    public static void n_print(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.println("Elif");
+        }
+    }
+    public static void main(String[] args) {
+        n_print(8);
+    }
+}
+```
