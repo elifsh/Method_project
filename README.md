@@ -58,16 +58,13 @@ public class Main {
 
             if (basamak!=0) {
                 i++;
-            }
-            else{
+            } else {
                 System.out.println("Sayi 1 basamaklidir.");
                 break;
             }
-        }
-        if (i>0) {
+        } if (i>0) {
             System.out.println("Sayi "+i+" Basamaklidir.");
-        }
-        else{
+        } else {
             System.out.println("Sayi 1 Basamaklidir.");
         }
         return i;
@@ -89,8 +86,7 @@ public class Main {
         int f = 0, f1 = 1, f2;
         if (n == 0) {
             return f;
-        }
-        for (int i = 2; i <= n; i++) {
+        } for (int i = 2; i <= n; i++) {
             f2 = f + f1;
             f  = f1;
             f1 = f2;
@@ -107,4 +103,24 @@ public class Main {
     }
 }
 
+```
+### Kendisine parametre olarak gelen pozitif tam sayının faktöriyelini alan methodu yazınız.
+```java
+import java.util.Scanner;
+public class Main {
+    public static int factorial(int n){
+        int f = 1;
+        for (int i = n; i > 0; i--) {
+            f*=i;
+        }
+        return f;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Sayi giriniz:");
+        int n = sc.nextInt();
+        sc.close();
+        System.out.println(factorial(n));
+    }
+}
 ```
