@@ -144,3 +144,32 @@ public class Main {
     }
 }
 ```
+### Kendisine parametre olarak gelen iki tamsayıdan büyük olanı geri döndüren methodu yazınız.
+```java
+import java.util.Scanner;
+public class Main {
+    public static int print_enb(int a, int b){
+        int enb = 0;
+        if (a>b) {
+            enb = a;
+        } else if(b>a) {
+            enb = b;
+        } else {
+            enb = a;
+        }
+        return enb;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Sayi Giriniz: ");
+        int a = sc.nextInt();
+        System.out.print("Sayi Giriniz: ");
+        int b = sc.nextInt();
+        sc.close();
+        System.out.println("Buyuk Sayi: " + print_enb(a, b));
+    }
+}
+```
+### Kendisine parametre olarak gelen Stringteki küçük karakterlerin sayısını geri döndüren methodu yazınız.
+```java
+```
