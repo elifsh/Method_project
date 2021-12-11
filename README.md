@@ -429,6 +429,29 @@ public class Main {
 ```
 ### Kendisine parametre olarak gelen tamsayı dizisindeki en küçük elemanın indisini geri döndüren methodu yazınız.
 ```java
+import java.util.Arrays;
+import java.util.Random;
+public class Main {
+    public static  int array_sum(int [] arr) {
+        int enk = arr[0], enk_d = 0;
+        for (int i = 1; i < arr.length; i++) {
+            if (enk>arr[i]) {
+                enk = arr[i];
+                enk_d = i;
+            }
+        }
+        return enk_d;
+    }
+    public static void main(String[] args) {
+        Random r = new Random();
+        int [] arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = r.nextInt(10)+1;
+        }
+        System.out.println(Arrays.toString(arr));
+        System.out.println("Tamsayi dizisindeki en kucuk  sayinin indisi: "+ array_sum(arr));
+    }
+}
 ```
 ### Kendisine parametre olarak gelen tamsayı dizisinin sıralı olup olmadığını geri döndüren methodu yazınız.
 ```java
