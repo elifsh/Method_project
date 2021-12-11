@@ -172,4 +172,32 @@ public class Main {
 ```
 ### Kendisine parametre olarak gelen Stringteki küçük karakterlerin sayısını geri döndüren methodu yazınız.
 ```java
+import java.util.Scanner;
+public class Main {
+    public static  String numbers_of_lowercase_char(String str){
+        int sayac = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i)>=97 && str.charAt(i)<=122) {
+                sayac++;
+            }
+        }
+        String num = Integer.toString(sayac);
+        return num;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Kelime giriniz: ");
+        String str = sc.nextLine();
+        sc.close();
+        System.out.println("Kucuk Karakterlerin Sayisi: " + numbers_of_lowercase_char(str));
+    }
+}
+```
+### Kendisine parametre olarak gelen Stringi ters çevirip geri döndüren methodu yazınız.
+```java
+
+```
+### Kendisine parametre olarak gelen Stringteki küçük karakterleri büyük yapan sonucu geri döndüren methodu yazınız.
+```java
+
 ```
