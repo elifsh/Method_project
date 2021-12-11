@@ -83,4 +83,28 @@ public class Main {
 ```
 ### n.fibonacci sayısını geri döndüren methodu yazınız.
 ```java
+import java.util.Scanner;
+public class Main {
+    public static int fibonacci(int n){
+        int f = 0, f1 = 1, f2;
+        if (n == 0) {
+            return f;
+        }
+        for (int i = 2; i <= n; i++) {
+            f2 = f + f1;
+            f  = f1;
+            f1 = f2;
+        }
+        return f1;   
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Sayi giriniz:");
+        int n = sc.nextInt();
+        sc.close();
+        System.out.println(fibonacci(n));
+        
+    }
+}
+
 ```
