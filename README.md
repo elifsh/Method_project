@@ -216,5 +216,26 @@ public class Main {
 ```
 ### Kendisine parametre olarak gelen Stringteki küçük karakterleri büyük yapan sonucu geri döndüren methodu yazınız.
 ```java
-
+import java.util.Scanner;
+public class Main {
+    public static  String to_uppercase(String str){
+        String temp = "";
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            ch = (char)(ch-32); 
+            temp += ch;
+        } 
+        return temp;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Kelime giriniz: ");
+        String str = sc.nextLine();
+        sc.close();
+        System.out.println(to_uppercase(str));
+    }
+}
+```
+### Kendisine parametre olarak gelen Stringteki küçük karakterleri büyük, büyük karakterleri küçük yapıp sonucu geri döndüren methodu yazınız. 
+```java
 ```
