@@ -46,3 +46,41 @@ public class Main {
     }
 }
 ```
+### Kendisine parametre olarak gelen pozitif tamsayısının kaç basamaklı olduğunu geri döndüren methodu yazınız.
+```java
+import java.util.Scanner;
+public class Main {
+    public static int basamak_sayisi(int sayi){
+        int i = 0, basamak = 0;
+        while (sayi != 0) {
+            basamak += sayi%10;
+            sayi /= 10;
+
+            if (basamak!=0) {
+                i++;
+            }
+            else{
+                System.out.println("Sayi 1 basamaklidir.");
+                break;
+            }
+        }
+        if (i>0) {
+            System.out.println("Sayi "+i+" Basamaklidir.");
+        }
+        else{
+            System.out.println("Sayi 1 Basamaklidir.");
+        }
+        return i;
+    }
+    public static void main(String[] args) {
+        Scanner sc =  new Scanner(System.in);
+        System.out.println("Lutfen pozitif bir tamsayi giriniz:");
+        int a = sc.nextInt();
+        sc.close();
+        basamak_sayisi(a);
+    }
+}
+```
+### n.fibonacci sayısını geri döndüren methodu yazınız.
+```java
+```
