@@ -327,12 +327,82 @@ public class Main {
 ```
 ### Kendisine parametre olarak gelen Stringteki kelime sayısını geri döndüren methodu yazınız.
 ```java
+import java.util.Scanner;
+public class Main {
+    public static  String word_num(String str) {
+        char temp = ' ';
+        int sayac = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == temp) {
+                sayac++;
+            }
+        }
+        String empty = "Kelime Sayisi: " + (sayac+1);
+        return empty;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("String giriniz: ");
+        String str = sc.nextLine();
+        sc.close();
+        System.out.println(word_num(str));
+    }
+}
 ```
 ### Kendisine parametre olarak gelen Stringte 'a' karakterinin olup olmadığını geri döndüren methodu yazınız.
 ```java
+import java.util.Scanner;
+public class Main {
+    public static  String a_control(String str) {
+        boolean b = true;
+        String a = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'a') {
+                b = true;
+            } else {
+                b = false;
+            }
+        } if (b == true) {
+            a = "'a' karakteri var | " + str;
+        } else {
+            a = "'a' karakteri yok | " + str;
+        }
+        return a;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Kelime giriniz: ");
+        String str = sc.nextLine();
+        sc.close();
+        System.out.println(a_control(str));
+    }
+}
 ```
 ### Kendisine parametre olarak gelen Stringin palindrom olup olmadığını geri döndüren methodu yazınız.
 ```java
+import java.util.Scanner;
+public class Main {
+    public static  String str_palindrome(String str) {
+        String temp = "" ;
+        String p = "";
+        char[] ch = str.toCharArray();
+        for (int i = ch.length-1; i >= 0; i--) {
+            temp += ch[i];
+        } if (str.equalsIgnoreCase(temp)) {
+            p = "String Palindromdur. | " + str + " == " + temp;
+        } else {
+            p = "String Palindrom Degildir. | " + str + " != " + temp;
+        }
+        return p;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Kelime giriniz: ");
+        String str = sc.nextLine();
+        sc.close();
+        System.out.println(str_palindrome(str));
+    }
+}
 ```
 ### Kendisine parametre olarak gelen tamsayı dizisinin toplamını geri döndüren methodu yazınız.
 ```java
