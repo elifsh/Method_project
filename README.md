@@ -238,4 +238,102 @@ public class Main {
 ```
 ### Kendisine parametre olarak gelen Stringteki küçük karakterleri büyük, büyük karakterleri küçük yapıp sonucu geri döndüren methodu yazınız. 
 ```java
+import java.util.Scanner;
+public class Main {
+    public static  String uppercase_lowercase(String str){
+        String temp = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i)>=65 && str.charAt(i)<=90) {
+                char ch = str.charAt(i);
+                ch = (char)(ch+32); 
+                temp += ch;
+            }
+            else if (str.charAt(i)>=97 && str.charAt(i)<=122) {
+                char ch = str.charAt(i);
+                ch = (char)(ch-32); 
+                temp += ch;
+            }
+        } 
+        return temp;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Kelime giriniz: ");
+        String str = sc.nextLine();
+        sc.close();
+        System.out.println(uppercase_lowercase(str));
+    }
+}
+```
+### Kendisine parametre olarak gelen Stringteki "aa" Stringlerinden kaç tane olduğunu geri döndüren methodu yazınız.
+```java
+import java.util.Scanner;
+public class Main {
+    public static  String aa_control(String str){
+        int sayac = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i)=='a' && str.charAt(i+1)=='a') {
+                sayac++;
+            }
+        }
+        String num = Integer.toString(sayac); 
+        return num;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Kelime giriniz: ");
+        String str = sc.nextLine();
+        sc.close();
+        System.out.println(aa_control(str));
+    }
+}
+``` 
+### Kendisine parametre olarak gelen iki Stringten büyük olanı geri döndüren methodu yazınız.
+```java
+import java.util.Scanner;
+public class Main {
+    public static  String enb_str(String str, String str1){
+        int enb_str = 0 ;
+        String enbStr = "";
+        char [] ch = str.toCharArray();
+        char [] ch1 = str1.toCharArray();
+        int str_size = 0, str1_size = 0;
+        for (int i = 0; i < ch.length; i++) {
+            str_size += ch[i];
+        } for (int i = 0; i < ch1.length; i++) {
+            str1_size += ch1[i]; 
+        } if (str_size>str1_size) {
+            enb_str = str_size;
+            enbStr += str;
+        } else if (str_size < str1_size) {
+            enb_str = str1_size;
+            enbStr += str;
+        } else {
+            System.out.println("Iki String Esit Buyuklukte: " + str + "==" + str1);
+        }
+        String temp = "En buyuk olan : " + enbStr+ " |" + " Buyuklugu: " + enb_str;
+        return temp;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Kelime giriniz: ");
+        String str = sc.nextLine();
+        System.out.println("Kelime giriniz: ");
+        String str1 = sc.nextLine();
+        sc.close();
+        System.out.println(enb_str(str,str1));
+    }
+}
+```
+### Kendisine parametre olarak gelen Stringteki kelime sayısını geri döndüren methodu yazınız.
+```java
+```
+### Kendisine parametre olarak gelen Stringte 'a' karakterinin olup olmadığını geri döndüren methodu yazınız.
+```java
+```
+### Kendisine parametre olarak gelen Stringin palindrom olup olmadığını geri döndüren methodu yazınız.
+```java
+```
+### Kendisine parametre olarak gelen tamsayı dizisinin toplamını geri döndüren methodu yazınız.
+```java
 ```
