@@ -406,4 +406,33 @@ public class Main {
 ```
 ### Kendisine parametre olarak gelen tamsayı dizisinin toplamını geri döndüren methodu yazınız.
 ```java
+import java.util.Arrays;
+import java.util.Random;
+public class Main {
+    public static  int array_sum(int [] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        Random r = new Random();
+        int [] arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = r.nextInt(10)+1;
+        }
+        System.out.println(Arrays.toString(arr));
+        System.out.println("Dizi elemanlari toplami: " + array_sum(arr));
+    }
+}
+```
+### Kendisine parametre olarak gelen tamsayı dizisindeki en küçük elemanın indisini geri döndüren methodu yazınız.
+```java
+```
+### Kendisine parametre olarak gelen tamsayı dizisinin sıralı olup olmadığını geri döndüren methodu yazınız.
+```java
+```
+### Kendisine parametre olarak gelen tamsayı dizisinin her elemanını 1 arttırıp geri döndüren methodu yazınız.
+```java
 ```
