@@ -195,7 +195,24 @@ public class Main {
 ```
 ### Kendisine parametre olarak gelen Stringi ters çevirip geri döndüren methodu yazınız.
 ```java
-
+import java.util.Scanner;
+public class Main {
+    public static  String reverse_String(String str){
+        String temp = " " ;
+        char[] ch = str.toCharArray();
+        for (int i = ch.length-1; i >= 0; i--) {
+            temp += ch[i];
+        }
+        return temp;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Kelime giriniz: ");
+        String str = sc.nextLine();
+        sc.close();
+        System.out.println("Ters Cevirilmis Kelime: " + reverse_String(str));
+    }
+}
 ```
 ### Kendisine parametre olarak gelen Stringteki küçük karakterleri büyük yapan sonucu geri döndüren methodu yazınız.
 ```java
