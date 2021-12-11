@@ -124,3 +124,23 @@ public class Main {
     }
 }
 ```
+### Kendisine parametre olarak gelen tamsayıya kadar olan tüm tamsayıları toplayan methodu yazınız.
+```java
+import java.util.Scanner;
+public class Main {
+    public static int sayiya_kadar_topla(int n){
+        int top = 0;
+        for (int i = n; i >= 0; i--) {
+            top += i;
+        }
+        return top;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Sayi giriniz:");
+        int n = sc.nextInt();
+        sc.close();
+        System.out.println(sayiya_kadar_topla(n));
+    }
+}
+```
