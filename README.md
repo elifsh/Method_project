@@ -512,6 +512,25 @@ public class Main {
 ```
 ### Kendisine parametre olarak gelen String dizisindeki en uzun Stringinolduğu indisi geri döndüren methodu yazınız.
 ```java
+import java.util.Arrays;
+public class Main {
+    public static  int string_lengths(String [] str) {
+        int enb = str[0].length();
+        int enb_d = 0; 
+        for (int i = 0; i < str.length; i++) {
+            if (enb < str[i].length()) {
+                enb = str[i].length();
+                enb_d = i;
+            }
+        }
+        return enb_d;
+    }
+    public static void main(String[] args) {
+        String [] str = {"Ali","Ayse","el","ele"};
+        System.out.println(Arrays.toString(str));
+        System.out.println("Uzunlugu en fazla olan elemanin indisi: " + string_lengths(str));
+    }
+}
 ```
 ### Kendisine parametre olarak gelen tamsayı dizisindeki en büyük ikinci sayıyı geri dönrüren methodu yazınız.
 ```java
