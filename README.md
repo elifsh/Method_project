@@ -510,7 +510,7 @@ public class Main {
     }
 }
 ```
-### Kendisine parametre olarak gelen String dizisindeki en uzun Stringinolduğu indisi geri döndüren methodu yazınız.
+### Kendisine parametre olarak gelen String dizisindeki en uzun Stringin olduğu indisi geri döndüren methodu yazınız.
 ```java
 import java.util.Arrays;
 public class Main {
@@ -673,7 +673,7 @@ public class Main {
 import java.util.Arrays;
 import java.util.Random;
 public class Main {
-    public static String  print2d_enb(int [][] arr) {
+    public static String  print_row_sum(int [][] arr) {
         int top = 0;
         for (int i = 0; i < arr.length; i++) {
             top = 0;
@@ -694,8 +694,88 @@ public class Main {
         } for (int[] i : arr) {
             System.out.println(Arrays.toString(i));
         }
-        System.out.println(print2d_enb(arr));
+        System.out.println(print_row_sum(arr));
     }
 }
 ```
-### Kendisine 
+### Kendisine parametre olarak gelen iki boyutlu String dizisindeki en uzun Stringi geri döndüren methodu yazınız.
+```java
+import java.util.Arrays;
+public class Main {
+    public static  String string_2d_lengths(String [][] str) {
+        int enb = str[0][0].length();
+        String enb_d = ""; 
+        for (int i = 0; i < str.length; i++) {
+            for (int j = 0; j < str.length; j++) {
+                if (enb < str[i][j].length()) {
+                    enb = str[i][j].length();
+                    enb_d = str[i][j];
+                }
+            }
+        }
+        return enb_d;
+    }
+    public static void main(String[] args) {
+        String [][] str = {{"Ali","Ayse","el","ele"},{"elay","elay","ey","yey"},{"umbirirrella","ayy","ayy","jdk"}};
+        for (String [] i : str) {
+            System.out.println(Arrays.toString(i));
+        }
+        System.out.println("Uzunlugu en fazla olan eleman: " + string_2d_lengths(str));
+    }
+}
+```
+### Kendisine parametre olarak gelen 3x3'lük A ve B matrislerinin toplamını geri döndüren methodu yazınız.
+```java
+import java.util.Arrays;
+import java.util.Random;
+public class Main {
+    public static  int[][] matris_sum(int [][] A, int [][] B) {
+        int[][] sum = new int[3][3];
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A.length; j++) {
+                sum[i][j] = A[i][j] + B[i][j];
+            }
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        Random r = new Random();
+        int [][] A = new int[3][3];
+        int [][] B = new int[3][3]; 
+        
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A.length; j++) {
+                A[i][j] = r.nextInt(10)+1;
+                B[i][j] = r.nextInt(10)+1;
+            }
+        }
+        System.out.println("A matrisi: ");
+        for (int [] i : A) {
+            System.out.println(Arrays.toString(i));
+        }
+        System.out.println("B matrisi: ");
+        for (int [] i : B) {
+            System.out.println(Arrays.toString(i));
+        }
+        System.out.println("Matrisler Toplami: ");
+        for (int [] i : matris_sum(A, B)) {
+            System.out.println(Arrays.toString(i));
+        }
+    }
+}
+```
+### Kendisine parametre olarak gelen 10 elemanlı tamsayı dizisini 1 sağa döndüren ve diziyi ana methoda geri döndüren methodu yazınız.
+```java
+```
+### 10 elemanlı 2 tamsayı dizisinin toplamını geri döndüren methodu yazınız.
+```java
+```
+### Kendisine parametre olarak gelen sayının asal olup olmadığını geri döndüren methodu yazınız.
+```java
+```
+### Kendisine parametre olarak gelen 10 elemanlı tamsayı dizisindeki tek olanların ortalamasını geri döndüren methodu yazınız.
+```java
+```
+### Kendisine parametre olarak gelen iki boyutlu String dizisi içindeki en uzun karaktere sahip olan Stringi ve yerini(satır,sütun) geri döndüren methodu yazınız.
+```java
+```
