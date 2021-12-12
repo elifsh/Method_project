@@ -534,10 +534,75 @@ public class Main {
 ```
 ### Kendisine parametre olarak gelen tamsayı dizisindeki en büyük ikinci sayıyı geri dönrüren methodu yazınız.
 ```java
+import java.util.Arrays;
+import java.util.Random;
+public class Main {
+    public static  int  print_enb2(int [] arr) {
+        Arrays.sort(arr);
+        int enb2 = arr[arr.length-2];
+        return enb2;
+    }
+    public static void main(String[] args) {
+        Random r = new Random();
+        int [] arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = r.nextInt(10)+1;
+        }
+        System.out.println(Arrays.toString(arr));
+        System.out.println(print_enb2(arr));
+    }
+}
 ```
 ### Kendisine parametre olarak gelen tamsayı dizisindeki en büyük ve en küçük sayıyı geri döndüren methodu yazınız.
 ```java
+import java.util.Arrays;
+import java.util.Random;
+public class Main {
+    public static  String  print_enb_enk(int [] arr) {
+        Arrays.sort(arr);
+        int enb = arr[arr.length-1];
+        int enk = arr[0];
+        String temp = "Dizideki En buyuk sayi: " + enb + " | Dizideki En kucuk sayi: " + enk;
+        return temp;
+    }
+    public static void main(String[] args) {
+        Random r = new Random();
+        int [] arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = r.nextInt(10)+1;
+        }
+        System.out.println(Arrays.toString(arr));
+        System.out.println(print_enb_enk(arr));
+    }
+}
 ```
 ### Vize ve final notlarının bulunduğu iki diziyi parametre olarak alıp öğrencilerin ortalamasını geri döndüren methodu yazınız.
 ```java
+import java.util.Arrays;
+import java.util.Random;
+public class Main {
+    public static  String  score_average(int [] Vize, int [] Final) {
+        int [] ort = new int[10];
+        for (int i = 0; i < ort.length; i++) {
+            ort[i]=(Vize[i]+Final[i])/2;
+        }
+        String temp = Arrays.toString(ort);
+        return temp;
+    }
+    public static void main(String[] args) {
+        Random r = new Random();
+        int [] Vize = new int[10];
+        int [] Final = new int[10];
+
+        for (int i = 0; i < Vize.length; i++) {
+            Vize[i] = r.nextInt(100)+1;
+        }
+        for (int i = 0; i < Final.length; i++) {
+            Final[i] = r.nextInt(100)+1;
+        }
+        System.out.println("Vize Notlari:     " + Arrays.toString(Vize));
+        System.out.println("Final Notlari:    " + Arrays.toString(Final));
+        System.out.println("Not Ortalamalari: " + score_average(Vize,Final));
+    }
+}
 ```
