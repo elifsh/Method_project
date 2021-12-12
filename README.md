@@ -766,16 +766,127 @@ public class Main {
 ```
 ### Kendisine parametre olarak gelen 10 elemanlı tamsayı dizisini 1 sağa döndüren ve diziyi ana methoda geri döndüren methodu yazınız.
 ```java
+import java.util.Arrays;
+import java.util.Random;
+public class Main {
+    public static  int[] shifted_array(int [] A) {
+        int A_temp = A[A.length-1];
+        for (int i = A.length-2; i >= 0; i--) {
+            A[i+1] = A[i];
+        }
+        A[0] = A_temp;
+        return A;
+    }
+    public static void main(String[] args) {
+        Random r = new Random();
+        int []A = new int[10];
+        for (int i = 0; i < A.length; i++) {
+            A[i] = r.nextInt(10)+1;
+        }
+        System.out.println(Arrays.toString(A));
+        System.out.println(Arrays.toString(shifted_array(A)));
+    }
+}
 ```
 ### 10 elemanlı 2 tamsayı dizisinin toplamını geri döndüren methodu yazınız.
 ```java
+import java.util.Arrays;
+import java.util.Random;
+public class Main {
+    public static  int[] sum_array(int [] A, int [] B) {
+        int [] sum = new int[10];
+        for (int i = 0; i < sum.length; i++) {
+            sum[i] = A[i] + B[i];
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        Random r = new Random();
+        int [] A = new int[10];
+        int [] B = new int[10];
+        for (int i = 0; i < A.length; i++) {
+            A[i] = r.nextInt(10)+1;
+            B[i] = r.nextInt(10)+1;
+        }
+        System.out.println("A dizisi: " + Arrays.toString(A));
+        System.out.println("B dizisi: " + Arrays.toString(B));
+        System.out.println("Diziler toplami: " + Arrays.toString(sum_array(A,B)));
+    }
+}
 ```
 ### Kendisine parametre olarak gelen sayının asal olup olmadığını geri döndüren methodu yazınız.
 ```java
+import java.util.Random;
+public class Main {
+    public static  boolean prime_number(int n) {
+        int sayac = 0;
+        boolean b = true;
+        for (int i = 2; i < Math.sqrt(n); i++) {
+            if (n%i == 0) {
+                sayac++;
+            }
+        } if (sayac == 0) {
+            b = true;
+        } else {
+            b = false;
+        }
+        return b;
+    }
+    public static void main(String[] args) {
+        Random r = new Random();
+        int n = r.nextInt(1000)+1;
+        System.out.println(n +" sayisi asal mi? " + prime_number(n));
+    }
+}
 ```
 ### Kendisine parametre olarak gelen 10 elemanlı tamsayı dizisindeki tek olanların ortalamasını geri döndüren methodu yazınız.
 ```java
+import java.util.Arrays;
+import java.util.Random;
+public class Main {
+    public static  int sum_of_odd_number(int [] A) {
+        int sum_odd = 0;
+        for (int i = 0; i < A.length; i++) {
+            if (A[i]%2!=0) {
+                sum_odd += A[i];
+            }
+        }
+        return sum_odd;
+    }
+    public static void main(String[] args) {
+        Random r = new Random();
+        int [] A = new int[10];
+        for (int i = 0; i < A.length; i++) {
+            A[i] = r.nextInt(100)+1;
+        }
+        System.out.println(Arrays.toString(A));
+        System.out.println("Dizi icindeki tek elemanlarin toplami: " + (sum_of_odd_number(A)));
+    }
+}
 ```
 ### Kendisine parametre olarak gelen iki boyutlu String dizisi içindeki en uzun karaktere sahip olan Stringi ve yerini(satır,sütun) geri döndüren methodu yazınız.
 ```java
+import java.util.Arrays;
+public class Main {
+    public static  String string_2d_lengths(String [][] str) {
+        int enb = str[0][0].length();
+        String enb_d = ""; 
+        for (int i = 0; i < str.length; i++) {
+            for (int j = 0; j < str.length; j++) {
+                if (enb < str[i][j].length()) {
+                    enb = str[i][j].length();
+                    enb_d = str[i][j] + "\nEn uzun Stringin bulundugu yer: " + "|i = " + i + " ," + " j = " + j + "|";  ;
+                }
+            }
+        }
+        return enb_d;
+    }
+    public static void main(String[] args) {
+        String [][] str = {{"Ali","Ayse","el","ele"},{"elay","elay","ey","yey"},{"umbirirrella","ayy","ayy","jdk"}};
+        for (String [] i : str) {
+            System.out.println(Arrays.toString(i));
+        }
+        System.out.println("Uzunlugu en fazla olan eleman: " + string_2d_lengths(str));
+    }
+}
 ```
