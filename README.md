@@ -606,3 +606,96 @@ public class Main {
     }
 }
 ```
+### Kendisine parametre olarak gelen iki boyutlu tamsayı dizisindeki en büyük sayıyı geri döndüren methodu yazınız.
+```java
+import java.util.Arrays;
+import java.util.Random;
+public class methods_projects {
+    public static  int  print2d_enb(int [][] arr) {
+        int enb = arr[0][0];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (enb < arr[i][j]) {
+                    enb = arr[i][j];
+                }
+            }
+        }
+        return enb;
+    }
+    public static void main(String[] args) {
+        Random r = new Random();
+        int [][] arr = new int[10][10];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                arr[i][j] = r.nextInt(100)+1;
+            }
+        } for (int[] i : arr) {
+            System.out.println(Arrays.toString(i));
+        }
+        System.out.println("Dizideki en buyuk eleman: " + print2d_enb(arr));
+    }
+}
+```
+### Bir önceki sorudaki en büyük elemanın indisini döndüren methodu yazınız.
+```java
+import java.util.Arrays;
+import java.util.Random;
+public class Main {
+    public static  String  print2d_enb(int [][] arr) {
+        int enb = arr[0][0];
+        String enb_d = " ";
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (enb < arr[i][j]) {
+                    enb = arr[i][j];
+                    enb_d = "En büyük elemanin indisleri: "+"|i = "+ i +" ,"+" j = " + j + "|"; 
+                }
+            }
+        }
+        return enb_d;
+    }
+    public static void main(String[] args) {
+        Random r = new Random();
+        int [][] arr = new int[10][10];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                arr[i][j] = r.nextInt(100)+1;
+            }
+        } for (int[] i : arr) {
+            System.out.println(Arrays.toString(i));
+        }
+        System.out.println("Dizideki en buyuk eleman: " + print2d_enb(arr));
+    }
+}
+```
+### İki önceki sorudaki her bir satırın toplamını geri döndüren methodu yazınız.
+```java
+import java.util.Arrays;
+import java.util.Random;
+public class Main {
+    public static String  print2d_enb(int [][] arr) {
+        int top = 0;
+        for (int i = 0; i < arr.length; i++) {
+            top = 0;
+            for (int j = 0; j < arr[0].length; j++) {
+                top += arr[i][j];
+            }
+            System.out.println((i+1)+". satirin toplami: "+ top);  
+        }
+        return "";
+    }
+    public static void main(String[] args) {
+        Random r = new Random();
+        int [][] arr = new int[10][10];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                arr[i][j] = r.nextInt(100)+1;
+            }
+        } for (int[] i : arr) {
+            System.out.println(Arrays.toString(i));
+        }
+        System.out.println(print2d_enb(arr));
+    }
+}
+```
+### Kendisine 
