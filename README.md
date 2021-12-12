@@ -510,3 +510,15 @@ public class Main {
     }
 }
 ```
+### Kendisine parametre olarak gelen String dizisindeki en uzun Stringinolduğu indisi geri döndüren methodu yazınız.
+```java
+```
+### Kendisine parametre olarak gelen tamsayı dizisindeki en büyük ikinci sayıyı geri dönrüren methodu yazınız.
+```java
+```
+### Kendisine parametre olarak gelen tamsayı dizisindeki en büyük ve en küçük sayıyı geri döndüren methodu yazınız.
+```java
+```
+### Vize ve final notlarının bulunduğu iki diziyi parametre olarak alıp öğrencilerin ortalamasını geri döndüren methodu yazınız.
+```java
+```
