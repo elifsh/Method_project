@@ -455,6 +455,38 @@ public class Main {
 ```
 ### Kendisine parametre olarak gelen tamsayı dizisinin sıralı olup olmadığını geri döndüren methodu yazınız.
 ```java
+import java.util.Arrays;
+import java.util.Random;
+public class Main {
+    public static  int array_sort_control(int [] arr) {
+        boolean b = true;
+        int enk = arr[0];
+        for (int i = 1; i < arr.length-1; i++) {
+            if (enk >= arr[i]) {
+                b = false;
+                break;
+            } else {
+                b = true;
+            }
+            enk = arr[i];
+        } if (b == true) {
+            System.out.println("Tamsayi dizisi Siralidir..");
+            return 1;
+        } else {
+            System.out.println("Tamsayi dizisi Sirali degildir..");
+            return 0;
+        }
+    }
+    public static void main(String[] args) {
+        Random r = new Random();
+        int [] arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = r.nextInt(10)+1;
+        }
+        System.out.println(Arrays.toString(arr));
+        System.out.println(array_sort_control(arr));
+    }
+}
 ```
 ### Kendisine parametre olarak gelen tamsayı dizisinin her elemanını 1 arttırıp geri döndüren methodu yazınız.
 ```java
