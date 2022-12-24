@@ -86,7 +86,7 @@ public class Main {
         int f = 0, f1 = 1, f2;
         if (n == 0) {
             return f;
-        } for (int i = 2; i <= n; i++) {
+        } for (int i = 1; i <= n; i++) {
             f2 = f + f1;
             f  = f1;
             f1 = f2;
